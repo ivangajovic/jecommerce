@@ -5,6 +5,7 @@ package com.ecommerce.model;
  */
 public class Product {
 
+    private int productId;
     private String productName;
     private String productCategory;
     private String productDescription;
@@ -14,6 +15,14 @@ public class Product {
     private int unitInStock;
     private String productManufacturer;
 
+
+    public int getProductId() {
+        return productId;
+    }
+
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
 
     public String getProductName() {
         return productName;

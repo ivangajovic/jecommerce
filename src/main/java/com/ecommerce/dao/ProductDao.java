@@ -2,6 +2,7 @@ package com.ecommerce.dao;
 
 import com.ecommerce.model.Product;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +16,7 @@ public class ProductDao {
     public List<Product> getProductList(){
 
         Product product1 = new Product();
-
+        product1.setProductId(1);
         product1.setProductName("Stratocaster");
         product1.setProductCategory("Instruments");
         product1.setProductDescription("The world's greatest electric guitar comes in a variety of platforms.");
@@ -27,7 +28,7 @@ public class ProductDao {
 
 
         Product product2 = new Product();
-
+        product2.setProductId(2);
         product2.setProductName("D5 Stagepack");
         product2.setProductCategory("Microphones");
         product2.setProductDescription("AKG microphones are a synthesis of leading-edge industrial design, innovative electronics and world-class acoustics.");
@@ -39,7 +40,7 @@ public class ProductDao {
 
 
         Product product3 = new Product();
-
+        product3.setProductId(3);
         product3.setProductName("QuietComfort 35 wireless headphones II");
         product3.setProductCategory("Headphones");
         product3.setProductDescription("Enjoy clear, noise cancelling headphones, aviation headsets, sports earphones and wireless headphones with world-class performance and comfort.");
@@ -59,4 +60,12 @@ public class ProductDao {
 
     }
 
+    public Product getProductById(int productId) throws IOException {
+        for (Product product: getProductList()){
+            if (product.getProductId() == productId){
+                return product;
+            }
+        }
+        throw new IOException("No product found.");
+    }
 }

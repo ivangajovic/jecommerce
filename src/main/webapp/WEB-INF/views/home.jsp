@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/fancybox.css" />">
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/animate.css" />">
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/main.css" />">
+    <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 
     <script type="text/javascript" src="<c:url value="/resources/js/jquery.js" />"></script>
     <script type="text/javascript" src="<c:url value="/resources/js/fancybox.js" />"></script>
@@ -225,5 +226,6 @@
     </div>
 </footer><!--  End footer  -->
 <script src='../ga.js'></script>
+<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
 </body>
 </html>
