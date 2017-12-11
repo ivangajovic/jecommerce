@@ -12,7 +12,7 @@
     <title>Sublime - stunning free HTML5/CSS3 website template</title>
     <meta charset="utf-8">
     <meta name="author" content="pixelhint.com">
-    <meta name="description" content="Sublime Stunning free HTML5/CSS3 website template"/>
+    <meta name="description" content="Ivan's Web Shop"/>
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/reset.css" />">
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/fancybox-thumbs.css" />">
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/fancybox-buttons.css" />">
