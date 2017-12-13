@@ -11,7 +11,7 @@
 <head>
     <title>Sublime - stunning free HTML5/CSS3 website template</title>
     <meta charset="utf-8">
-    <meta name="author" content="pixelhint.com">
+    <meta name="author" content="">
     <meta name="description" content="Ivan's Web Shop"/>
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/reset.css" />">
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/fancybox-thumbs.css" />">
@@ -33,13 +33,13 @@
 
 <section class="billboard dark">
     <header class="wrapper dark">
-        <a href="#"><img class="logo" src="<c:url value="/resources/img/logo_dark.png" />" alt=""/></a>
+        <a href="<c:url value="/"/>"><img class="logo" src="<c:url value="/resources/img/logo_dark.png" />" alt=""/></a>
         <nav>
             <ul>
                 <li><a href="">About Us</a></li>
                 <li><a href="<c:url value="/productList" />">Products</a></li>
-                <li><a href="">Journal</a></li>
                 <li><a href="">Contact Us</a></li>
+                <li><a href="<c:url value="/admin"/>">Admin</a></li>
             </ul>
         </nav>
     </header>
@@ -211,7 +211,7 @@
     <div class="wrapper">
         <div class="rights">
             <img src="<c:url value="/resources/img/footer_logo.png" />" alt="" class="footer_logo"/>
-            <p>© Sublime. All Rights Reserved 2014 - More Free Templates at <a href="http://pixelhint.com" target="_blank">Pixelhint.com</a></p>
+            <p>© Ivan. All Rights Reserved 2017 </p>
         </div>
 
         <nav>

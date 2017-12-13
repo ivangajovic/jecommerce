@@ -1,9 +1,12 @@
 package com.ecommerce.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
 
 /**
  * Created by ivang on 12/7/2017.
@@ -15,12 +18,18 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int productId;
+
+    @NotEmpty(message = "The product name must not be null.")
     private String productName;
     private String productCategory;
     private String productDescription;
+
+    @Min(value = 0, message = "The price cannot be less than zero.")
     private double productPrice;
     private String productCondition;
     private String productStatus;
+
+    @Min(value = 0, message = "Number of units in stock cannot be less than zero.")
     private int unitInStock;
     private String productManufacturer;
 

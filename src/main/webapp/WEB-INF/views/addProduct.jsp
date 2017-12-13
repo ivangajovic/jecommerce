@@ -10,9 +10,9 @@
             <hr class="separator"/>
         </div>
 
-        <form:form action="#" method="post" commandName="product">
+        <form:form action="${pageContext.request.contextPath}/admin/productInventory/addProduct" method="post" commandName="product">
         <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name">Name</label><form:errors path="productName" cssStyle="color: #b92c28;"/>
             <form:input path="productName" id="name" class="form-Control" />
         </div>
 
@@ -25,7 +25,7 @@
 
         <div class="form-group">
             <label for="description">Description</label>
-            <form:input path="productDescription" id="description" class="form-Control" />
+            <form:textarea path="productDescription" id="description" class="form-Control" />
         </div>
 
         <div class="form-group">
@@ -36,7 +36,7 @@
 
         <div class="form-group">
             <label for="manufacturer">Manufacturer</label>
-            <form:textarea path="productManufacturer" id="manufacturer" class="form-Control" />
+            <form:input path="productManufacturer" id="manufacturer" class="form-Control" />
         </div>
 
         <div class="form-group">
@@ -46,18 +46,18 @@
         </div>
 
         <div class="form-group">
-            <label for="price">Price</label>
+            <label for="price">Price</label><form:errors path="productPrice" cssStyle="color: #b92c28;"/>
             <form:input path="productPrice" id="price" class="form-Control" />
         </div>
 
         <div class="form-group">
-            <label for="unitInStock">Units in Stock</label>
+            <label for="unitInStock">Units in Stock</label><form:errors path="unitInStock" cssStyle="color: #b92c28;"/>
             <form:input path="unitInStock" id="unitInStock" class="form-Control" />
         </div>
 
         <br><br>
 
-        <input type="submit" value="submit" class="btn btn-default"/>
+        <input type="submit" value="Submit" class="btn btn-default"/>
         <a href="<c:url value="/admin/productInventory"/>" class="btn btn-default">Cancel</a>
 
 
