@@ -26,7 +26,7 @@
                         </div>
 
                         <a href="<spring:url value="/productList/viewProduct/${product.productId}"/>">
-                            <img src="<c:url value="/resources/img/blog_post1.jpg" />" alt=""/>
+                            <img src="<c:url value="/resources/images/${product.productId}.png" />" alt="image" style="width: 100%"/>
                         </a>
                     </div>
                     <a href="#">
@@ -35,6 +35,8 @@
                     <i>Manufacturer: </i><strong>${product.productManufacturer}</strong><br><br>
                     <i>Category: </i> <strong>${product.productCategory}</strong><br><br>
                     <i>Price: </i> <strong>${product.productPrice} EUR</strong><br><br>
+                    <br><br><a href="<spring:url value="/admin/productInventory/deleteProduct/${product.productId}"/> "><span class="glyphicon glyphicon-remove"/> </a>
+                    <br><br><a href="<spring:url value="/admin/productInventory/editProduct/${product.productId}"/> "><span class="glyphicon glyphicon-pencil"/> </a>
 
                 </li>
             </c:forEach>

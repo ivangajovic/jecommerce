@@ -33,8 +33,6 @@ public class ProductDaoImpl implements ProductDao {
         Session session = sessionFactory.getCurrentSession();
         Product product = (Product) session.get(Product.class, id);
         session.flush();
-
-
         return product;
     }
 
@@ -43,7 +41,6 @@ public class ProductDaoImpl implements ProductDao {
         Query query = session.createQuery("from Product");
         List<Product> products = query.list();
         session.flush();
-
         return products;
     }
 
@@ -53,5 +50,9 @@ public class ProductDaoImpl implements ProductDao {
         session.flush();
     }
 
-
+    public void editProduct(Product product){
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(product);
+        session.flush();
+    }
 }

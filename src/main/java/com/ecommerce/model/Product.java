@@ -1,12 +1,12 @@
 package com.ecommerce.model;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.web.multipart.MultipartFile;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Min;
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by ivang on 12/7/2017.
@@ -33,6 +33,16 @@ public class Product {
     private int unitInStock;
     private String productManufacturer;
 
+    @Transient
+    private MultipartFile productImage;
+
+    public MultipartFile getProductImage() {
+        return productImage;
+    }
+
+    public void setProductImage(MultipartFile productImage) {
+        this.productImage = productImage;
+    }
 
     public int getProductId() {
         return productId;

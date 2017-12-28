@@ -20,6 +20,11 @@
             <h3>This is the administrator page</h3>
             <hr class="separator"/>
         </div>
+        <c:if test="${pageContext.request.userPrincipal.name != null}">
+            <h2>
+                Welcome: ${pageContext.request.userPrincipal.name} | <a href="<c:url value="/j_spring_security_logout"/> ">Logout</a>
+            </h2>
+        </c:if>
             <h5><a href="<c:url value="/admin/productInventory" />">Product Inventory</a></h5>
 
             <p>Here you can view, check and modify product inventory!</p>

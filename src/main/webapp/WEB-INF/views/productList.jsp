@@ -26,7 +26,7 @@
                     </div>
 
                     <a href="<spring:url value="/productList/viewProduct/${product.productId}"/>">
-                        <img src="<c:url value="/resources/img/blog_post1.jpg" />" alt=""/>
+                        <img src="<c:url value="/resources/images/${product.productId}.png" />" alt="image" style="width: 100%"/>
                     </a>
                 </div>
                 <a href="#">

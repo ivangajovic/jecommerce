@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="eCommerce:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/eCommerce_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/src/main/webapp</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="eCommerce/web/Web" />
       <element id="directory" name="WEB-INF">
@@ -49,6 +49,14 @@
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.2.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:4.2.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:4.2.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:3.1.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.1.4.RELEASE" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.2.2" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:1.3.2" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
         </element>
       </element>
     </root>
