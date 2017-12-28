@@ -100,6 +100,7 @@ public class AdminController {
     }
 
 
+    //Display edit product form
     @RequestMapping("/admin/productInventory/editProduct/{id}")
     public String editProduct(@PathVariable("id") int id, Model model){
         Product product = productDao.getProductById(id);
@@ -109,6 +110,7 @@ public class AdminController {
     }
 
 
+    //Process edit product form
     @RequestMapping(value = "/admin/productInventory/editProduct", method = RequestMethod.POST)
     public String editProduct(@ModelAttribute("product") Product product, Model model, HttpServletRequest request){
         MultipartFile productImage = product.getProductImage();
@@ -127,7 +129,5 @@ public class AdminController {
 
         return "redirect:/admin/productInventory";
     }
-
-
 
 }
