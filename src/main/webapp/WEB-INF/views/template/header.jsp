@@ -1,3 +1,4 @@
+<%--<%@taglib prefix="form" uri="http://www.springframework.org/tags" %>--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -13,6 +14,8 @@
     <meta charset="utf-8">
     <meta name="author" content="">
     <meta name="description" content="Ivan's Web Shop"/>
+    <%--Angular JS--%>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/reset.css" />">
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/fancybox-thumbs.css" />">
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/fancybox-buttons.css" />">
@@ -39,7 +42,7 @@
                 <li><a href="<c:url value="/" />">Home</a></li>
                 <li><a href="<c:url value="/productList" />">Products</a></li>
                 <li><a href="">Contact Us</a></li>
-                <li><a href="<c:url value="/admin"/>">Admin</a></li>
+                <li><a href="<c:url value="/admin" />">Admin</a></li>
             </ul>
         </nav>
     </header>

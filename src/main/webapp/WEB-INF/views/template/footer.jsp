@@ -16,7 +16,7 @@
         </nav>
     </div>
 </footer><!--  End footer  -->
-<script src='../ga.js'></script>
+
 <script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
 </body>
 </html>
