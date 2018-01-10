@@ -15,7 +15,7 @@
     <meta name="author" content="">
     <meta name="description" content="Ivan's Web Shop"/>
     <%--Angular JS--%>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/reset.css" />">
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/fancybox-thumbs.css" />">
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/fancybox-buttons.css" />">

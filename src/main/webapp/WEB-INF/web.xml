@@ -7,6 +7,7 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+    <!-- 	to connect the dispatcher servlet and applicationContext -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
