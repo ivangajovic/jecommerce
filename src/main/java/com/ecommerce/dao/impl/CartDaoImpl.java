@@ -2,6 +2,7 @@ package com.ecommerce.dao.impl;
 
 import com.ecommerce.dao.CartDao;
 import com.ecommerce.model.Cart;
+import com.ecommerce.model.Customer;
 import com.ecommerce.service.CustomerOrderService;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -32,10 +33,11 @@ public class CartDaoImpl implements CartDao{
     public void updateCart(Cart cart){
         Session session = sessionFactory.getCurrentSession();
         int cartId = cart.getCartId();
-        double grandTotal = customerOrderService.getCustomerOrderGrandTotal(cartId);
-        cart.setGrandTotal(grandTotal);
-
-        session.saveOrUpdate(cart);
+//        double grandTotal = customerOrderService.getCustomerOrderGrandTotal(cartId);
+//        cart.setGrandTotal(grandTotal);
+//
+//        session.saveOrUpdate(cart);
+//        session.flush();
     }
 
     public Cart validate(int cartId) throws IOException{

@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="rights">
             <img src="<c:url value="/resources/img/footer_logo.png" />" alt="" class="footer_logo"/>
-            <p> © Web Shop. All Rights Reserved 2017 <a href="#" target="_blank">www.gent_ivanho.com</a></p>
+            <p>Web Shop. All Rights Reserved 2017 <a href="#" target="_blank">www.gent_ivanho.com</a></p>
         </div>
 
         <nav>

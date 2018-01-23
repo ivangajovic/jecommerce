@@ -3,11 +3,6 @@
 <%@ taglib prefix="spring" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="/WEB-INF/views/template/header.jsp"%>
 
-<%--<section class="video">--%>
-    <%--<img src="<c:url value="/resources/img/video_logo.png" />" alt="" class="video_logo animated wow fadeInDown"/>--%>
-    <%--<h3 class="animated wow fadeInDown">who we are & what we do</h3>--%>
-    <%--<a href="http://www.youtube.com/embed/cBJyo0tgLnw" id="play_btn" class="fancybox animated wow flipInX" data-wow-duration="2s"></a>--%>
-<%--</section><!--  End video  -->--%>
 
 <section class="blog_posts">
     <div class="wrapper">

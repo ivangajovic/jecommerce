@@ -28,6 +28,11 @@
             <h5><a href="<c:url value="/admin/productInventory" />">Product Inventory</a></h5>
 
             <p>Here you can view, check and modify product inventory!</p>
+            <br><br>
+
+            <h5><a href="<c:url value="/admin/customer" />">Customer Management</a></h5>
+
+            <p>Here you can view the customer information!</p>
 
     </div>
 </section><!--  End blog_posts  -->
