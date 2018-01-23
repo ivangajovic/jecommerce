@@ -26,7 +26,7 @@
                         <span class="month">Jun</span>
                     </div>
 
-                    <a href="<spring:url value="/productList/viewProduct/${product.productId}"/>">
+                    <a href="<spring:url value="/product/viewProduct/${product.productId}"/>">
                         <img src="<c:url value="/resources/images/${product.productId}.png" />" alt="image" style="width: 100%"/>
                     </a>
                 </div>

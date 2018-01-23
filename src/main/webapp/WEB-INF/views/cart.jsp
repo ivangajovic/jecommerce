@@ -16,7 +16,9 @@
             <div ng-controller="cartCtrl" ng-init="initCartId('${cartId}')">
             <div>
                 <a class="btn btn-danger pull-left" ng-click="clearCart()"><span class="glyphicon glyphicon-remove"></span>Clear Cart</a>
+                <a href="<spring:url value="/order/${cartId}"/> " class="btn btn-successpull-right"><span class="glyphicon-shopping-cart glyphicon"></span>Check Out</a>
             </div>
+
 
             <table class="table table-hover">
                 <tr>
@@ -27,17 +29,17 @@
                     <th>Action</th>
                 </tr>
                 <tr ng-repeat="item in cart.cartItems">
-                    <td>{{item.product.productName}}</td>
-                    <td>{{item.product.productPrice}}</td>
-                    <td>{{item.quantity}}</td>
-                    <td>{{item.totalPrice}}</td>
-                    <td><a href="#" class="label label-danger" ng-click="removeFromCart(item.product.productId)"><span class="glyphicon glyphicon-remove"></span>remove</a></td>
+                    <td>{{ item.product.productName }}</td>
+                    <td>{{ item.product.productPrice }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.totalPrice }}</td>
+                    <td><a href="#" class="label label-danger" ng-click="removeFromCart(item.product.productId)"><span class="glyphicon glyphicon-remove"></span>Remove</a></td>
                 </tr>
                 <tr>
                     <th></th>
                     <th></th>
                     <th>Grand Total</th>
-                    <th>{{cart.grandTotal}}</th>
+                    <th>{{ calGrandTotal() }}</th>
                     <th></th>
                 </tr>
             </table>

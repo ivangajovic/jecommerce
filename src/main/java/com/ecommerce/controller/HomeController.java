@@ -1,54 +1,31 @@
 package com.ecommerce.controller;
 
-import com.ecommerce.dao.ProductDao;
-import com.ecommerce.dao.impl.ProductDaoImpl;
-import com.ecommerce.model.Product;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
-import javax.validation.Valid;
-import java.io.IOException;
-import java.util.List;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * Created by ivang on 12/6/2017.
+ * Created by ivang on 1/11/2018.
  */
 @Controller
 public class HomeController {
-
-    @Autowired
-    private ProductDao productDao;
 
     @RequestMapping("/")
     public String home(){
         return "home";
     }
 
+    @RequestMapping("/login")
+    public String login(@RequestParam(value="error", required = false) String error, @RequestParam(value = "logout", required = false) String logout, Model model){
+        if (error != null){
+            model.addAttribute("error", "Invalid username and password.");
+        }
 
-    @RequestMapping("/productList")
-    public String getProducts(Model model){
-        List<Product> products = productDao.getAllProducts();
-        model.addAttribute("products", products);
+        if (logout != null){
+            model.addAttribute("msg", "You have been logged out successfully.");
+        }
 
-        return "productList";
+        return "login";
     }
-
-
-    @RequestMapping("/productList/viewProduct/{productId}")
-    public String viewProduct(@PathVariable int productId, Model model) throws IOException {
-
-        Product product = productDao.getProductById(productId);
-        model.addAttribute(product);
-
-        return "viewProduct";
-    }
-
-
-
 }

@@ -13,7 +13,7 @@ public class CustomerOrder implements Serializable{
     private static final long serialVersionUID = -7687867690818030869L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int customerOrderId;
 
 

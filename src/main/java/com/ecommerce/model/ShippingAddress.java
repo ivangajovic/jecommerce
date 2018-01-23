@@ -1,9 +1,6 @@
 package com.ecommerce.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -16,10 +13,10 @@ public class ShippingAddress implements Serializable{
     private static final long serialVersionUID = 8340999452322919365L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int shippingAddressId;
     private String streetName;
-    private String apatmentNumber;
+    private String apartmentNumber;
     private String city;
     private String state;
     private String country;
@@ -45,12 +42,12 @@ public class ShippingAddress implements Serializable{
         this.streetName = streetName;
     }
 
-    public String getApatmentNumber() {
-        return apatmentNumber;
+    public String getApartmentNumber() {
+        return apartmentNumber;
     }
 
-    public void setApatmentNumber(String apatmentNumber) {
-        this.apatmentNumber = apatmentNumber;
+    public void setApartmentNumber(String apartmentNumber) {
+        this.apartmentNumber = apartmentNumber;
     }
 
     public String getCity() {
@@ -98,7 +95,7 @@ public class ShippingAddress implements Serializable{
     public String toString() {
         return "ShippingAddress{" +
                 "streetName='" + streetName + '\'' +
-                ", apatmentNumber='" + apatmentNumber + '\'' +
+                ", apartmentNumber='" + apartmentNumber + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
                 ", country='" + country + '\'' +

@@ -2,16 +2,18 @@ package com.ecommerce.dao;
 
 import com.ecommerce.model.Cart;
 
+import java.io.IOException;
+
 /**
  * Created by ivang on 1/3/2018.
  */
 public interface CartDao {
 
-    Cart create(Cart cart);
+    Cart getCartById(int cartId);
 
-    Cart read(String cartId);
+    Cart validate(int cartId) throws IOException;
 
-    void update(String cartId, Cart cart);
+    void updateCart(Cart cart);
 
-    void delete(String cartId);
+
 }

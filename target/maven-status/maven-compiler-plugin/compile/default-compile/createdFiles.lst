@@ -1,4 +1,16 @@
+com\ecommerce\model\Cart.class
 com\ecommerce\dao\impl\ProductDaoImpl.class
+com\ecommerce\controller\ProductController.class
+com\ecommerce\model\Users.class
+com\ecommerce\service\ProductService.class
+com\ecommerce\model\BillingAddress.class
+com\ecommerce\model\Authorities.class
+com\ecommerce\model\CustomerOrder.class
+com\ecommerce\dao\CartDao.class
 com\ecommerce\model\Product.class
-com\ecommerce\controller\HomeController.class
+com\ecommerce\model\CartItem.class
+com\ecommerce\service\impl\ProductServiceImpl.class
 com\ecommerce\dao\ProductDao.class
+com\ecommerce\model\ShippingAddress.class
+com\ecommerce\controller\HomeController.class
+com\ecommerce\model\Customer.class

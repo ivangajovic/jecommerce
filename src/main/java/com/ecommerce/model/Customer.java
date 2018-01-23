@@ -15,7 +15,7 @@ public class Customer implements Serializable{
     private static final long serialVersionUID = -3858319069370337221L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int customerId;
 
 
@@ -24,7 +24,7 @@ public class Customer implements Serializable{
 
 
     @NotEmpty(message = "The customer email must not be null.")
-    private String customerEmaill;
+    private String customerEmail;
 
 
     private String customerPhone;
@@ -47,7 +47,7 @@ public class Customer implements Serializable{
 
 
     @OneToOne
-    @JoinColumn(name = "shipingAddressId")
+    @JoinColumn(name = "shippingAddressId")
     private ShippingAddress shippingAddress;
 
 
@@ -73,12 +73,12 @@ public class Customer implements Serializable{
         this.customerName = customerName;
     }
 
-    public String getCustomerEmaill() {
-        return customerEmaill;
+    public String getCustomerEmail() {
+        return customerEmail;
     }
 
-    public void setCustomerEmaill(String customerEmaill) {
-        this.customerEmaill = customerEmaill;
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
     }
 
     public String getCustomerPhone() {

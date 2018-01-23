@@ -1,8 +1,6 @@
 package com.ecommerce.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by ivang on 1/10/2018.
@@ -11,8 +9,9 @@ import javax.persistence.Id;
 public class Users {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int usersId;
+
     private String username;
     private String password;
     private boolean enabled;

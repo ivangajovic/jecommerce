@@ -2,50 +2,50 @@ package com.ecommerce.dao.impl;
 
 import com.ecommerce.dao.CartDao;
 import com.ecommerce.model.Cart;
+import com.ecommerce.service.CustomerOrderService;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.io.IOException;
 
 /**
- * Created by ivang on 1/3/2018.
+ * Created by ivang on 1/19/2018.
  */
 @Repository
-public class CartDaoImpl implements CartDao {
+@Transactional
+public class CartDaoImpl implements CartDao{
 
-    private Map<String, Cart> listOfCarts;
+    @Autowired
+    private SessionFactory sessionFactory;
 
-    public CartDaoImpl(){
-        listOfCarts = new HashMap<String, Cart>();
+    @Autowired
+    private CustomerOrderService customerOrderService;
+
+    public Cart getCartById(int cartId){
+        Session session = sessionFactory.getCurrentSession();
+        return (Cart) session.get(Cart.class, cartId);
     }
 
-    public Cart create(Cart cart) {
-        if(listOfCarts.keySet().contains(cart.getCartId())){
-            throw new IllegalArgumentException(String.format("Cannot create a cart. A cart with the given id(%) already exist.", cart.getCartId()));
+    public void updateCart(Cart cart){
+        Session session = sessionFactory.getCurrentSession();
+        int cartId = cart.getCartId();
+        double grandTotal = customerOrderService.getCustomerOrderGrandTotal(cartId);
+        cart.setGrandTotal(grandTotal);
+
+        session.saveOrUpdate(cart);
+    }
+
+    public Cart validate(int cartId) throws IOException{
+        Cart cart = getCartById(cartId);
+        if (cart == null || cart.getCartItems().size() == 0){
+            throw new IOException(cartId + "");
         }
-        listOfCarts.put(cart.getCartId(), cart);
+
+        updateCart(cart);
+
         return cart;
-    }
-
-
-    public Cart read(String cartId) {
-
-        return listOfCarts.get(cartId);
-    }
-
-
-    public void update(String cartId, Cart cart) {
-        if(!listOfCarts.keySet().contains(cartId)){
-            throw new IllegalArgumentException(String.format("Cannot update cart. The cart with the given id(%) doesn't exist.", cart.getCartId()));
-        }
-        listOfCarts.put(cartId, cart);
-    }
-
-
-    public void delete(String cartId) {
-        if (!listOfCarts.keySet().contains(cartId)){
-            throw new IllegalArgumentException(String.format("Cannot delete the cart. The cart with the given id(%) doesn't exist.", cartId));
-        }
-        listOfCarts.remove(cartId);
     }
 }

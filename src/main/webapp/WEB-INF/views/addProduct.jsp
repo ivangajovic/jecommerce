@@ -11,7 +11,7 @@
             <hr class="separator"/>
         </div>
 
-        <form:form action="${pageContext.request.contextPath}/admin/productInventory/addProduct" method="post" commandName="product" enctype="multipart/form-data">
+        <form:form action="${pageContext.request.contextPath}/admin/product/addProduct" method="post" commandName="product" enctype="multipart/form-data">
         <div class="form-group">
             <label for="name">Name</label><form:errors path="productName" cssStyle="color: #b92c28;"/>
             <form:input path="productName" id="name" class="form-Control" />
@@ -63,15 +63,9 @@
 
         <br><br>
 
-        <input type="submit" value="Submit" class="btn btn-default"/>
-        <a href="<c:url value="/admin/productInventory"/>" class="btn btn-default">Cancel</a>
-
-
+        <input type="submit" value="submit" class="btn btn-default"/>
+        <a href="<c:url value="/admin/productInventory" />" class="btn btn-default">Cancel</a>
         </form:form>
-
-
-
-
 
 </section><!--  End blog_posts  -->
 

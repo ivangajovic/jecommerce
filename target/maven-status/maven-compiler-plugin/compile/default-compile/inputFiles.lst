@@ -1,4 +1,16 @@
 E:\test\eCommerce\src\main\java\com\ecommerce\dao\impl\ProductDaoImpl.java
+E:\test\eCommerce\src\main\java\com\ecommerce\model\Customer.java
 E:\test\eCommerce\src\main\java\com\ecommerce\model\Product.java
-E:\test\eCommerce\src\main\java\com\ecommerce\dao\ProductDao.java
+E:\test\eCommerce\src\main\java\com\ecommerce\dao\CartDao.java
+E:\test\eCommerce\src\main\java\com\ecommerce\service\impl\ProductServiceImpl.java
+E:\test\eCommerce\src\main\java\com\ecommerce\controller\ProductController.java
 E:\test\eCommerce\src\main\java\com\ecommerce\controller\HomeController.java
+E:\test\eCommerce\src\main\java\com\ecommerce\model\Cart.java
+E:\test\eCommerce\src\main\java\com\ecommerce\model\CustomerOrder.java
+E:\test\eCommerce\src\main\java\com\ecommerce\service\ProductService.java
+E:\test\eCommerce\src\main\java\com\ecommerce\model\Authorities.java
+E:\test\eCommerce\src\main\java\com\ecommerce\model\BillingAddress.java
+E:\test\eCommerce\src\main\java\com\ecommerce\dao\ProductDao.java
+E:\test\eCommerce\src\main\java\com\ecommerce\model\CartItem.java
+E:\test\eCommerce\src\main\java\com\ecommerce\model\Users.java
+E:\test\eCommerce\src\main\java\com\ecommerce\model\ShippingAddress.java

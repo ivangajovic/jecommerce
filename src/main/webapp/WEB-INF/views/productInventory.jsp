@@ -26,7 +26,7 @@
                             <span class="month">Jun</span>
                         </div>
 
-                        <a href="<spring:url value="/productList/viewProduct/${product.productId}"/>">
+                        <a href="<spring:url value="/product/viewProduct/${product.productId}" />">
                             <img src="<c:url value="/resources/images/${product.productId}.png" />" alt="image" style="width: 100%"/>
                         </a>
                     </div>
@@ -36,14 +36,14 @@
                     <i>Manufacturer: </i><strong>${product.productManufacturer}</strong><br><br>
                     <i>Category: </i> <strong>${product.productCategory}</strong><br><br>
                     <i>Price: </i> <strong>${product.productPrice} EUR</strong><br><br>
-                    <br><br><a href="<spring:url value="/admin/productInventory/deleteProduct/${product.productId}"/> "><span class="glyphicon glyphicon-remove"/> </a>
-                    <br><br><a href="<spring:url value="/admin/productInventory/editProduct/${product.productId}"/> "><span class="glyphicon glyphicon-pencil"/> </a>
+                    <br><br><a href="<spring:url value="/admin/product/deleteProduct/${product.productId}"/> "><span class="glyphicon glyphicon-remove"/> </a>
+                    <br><br><a href="<spring:url value="/admin/product/editProduct/${product.productId}"/> "><span class="glyphicon glyphicon-pencil"/> </a>
 
                 </li>
             </c:forEach>
         </ul>
     </div>
-        <a href="<spring:url value="/admin/productInventory/addProduct" /> " class="btn btn-primary">Add Product</a>
+        <a href="<spring:url value="/admin/product/addProduct" /> " class="btn btn-primary">Add Product</a>
 </section><!--  End blog_posts  -->
 
 

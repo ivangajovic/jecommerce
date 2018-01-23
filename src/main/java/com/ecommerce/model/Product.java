@@ -43,7 +43,7 @@ public class Product implements Serializable{
     @JsonIgnore
     private List<CartItem> cartItemList;
 
-
+    // Getters and Setter
 
     public MultipartFile getProductImage() {
         return productImage;
@@ -123,5 +123,13 @@ public class Product implements Serializable{
 
     public void setProductManufacturer(String productManufacturer) {
         this.productManufacturer = productManufacturer;
+    }
+
+    public List<CartItem> getCartItemList() {
+        return cartItemList;
+    }
+
+    public void setCartItemList(List<CartItem> cartItemList) {
+        this.cartItemList = cartItemList;
     }
 }
