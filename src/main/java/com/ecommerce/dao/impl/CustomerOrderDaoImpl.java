@@ -23,6 +23,4 @@ public class CustomerOrderDaoImpl  implements CustomerOrderDao{
         session.saveOrUpdate(customerOrder);
         session.flush();
     }
-
-
 }

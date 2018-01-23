@@ -36,7 +36,7 @@
                         </address>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6 text-right">
-                        <p>Shipping Date: <fmt:formatDate type="date" value="${now}" /></p>
+                        <p>Order Date: <fmt:formatDate type="date" value="${now}" /></p>
                     </div>
                 </div>
 

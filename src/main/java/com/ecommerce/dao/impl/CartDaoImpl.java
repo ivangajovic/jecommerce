@@ -33,11 +33,11 @@ public class CartDaoImpl implements CartDao{
     public void updateCart(Cart cart){
         Session session = sessionFactory.getCurrentSession();
         int cartId = cart.getCartId();
-//        double grandTotal = customerOrderService.getCustomerOrderGrandTotal(cartId);
-//        cart.setGrandTotal(grandTotal);
-//
-//        session.saveOrUpdate(cart);
-//        session.flush();
+        double grandTotal = customerOrderService.getCustomerOrderGrandTotal(cartId);
+        cart.setGrandTotal(grandTotal);
+
+        session.saveOrUpdate(cart);
+        session.flush();
     }
 
     public Cart validate(int cartId) throws IOException{
